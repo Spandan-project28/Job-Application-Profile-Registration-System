@@ -31,7 +31,7 @@ const App = () => {
     <div className="min-h-screen w-full bg-zinc-950 text-white p-2 flex flex-col gap-4">
       <Navbar setIsFormOpen={setIsFormOpen} />
       <main>
-        { isFormOpen?<Form setUsers={setUsers} users={users} setIsFormOpen={setIsFormOpen} updatedUser={updatedUser}/>:
+        { isFormOpen?<Form setUsers={setUsers} users={users} setIsFormOpen={setIsFormOpen} updatedUser={updatedUser} setUpdatedUser={setUpdatedUser}/>:
         (<div className="card-Container h-screen w-full flex flex-row gap-2 flex-wrap">
           {users.map((user)=>{
           return <Card user={user} key={user.id} id={user.id} deleteUser={deleteUser} setUpdatedUser={setUpdatedUser} setIsFormOpen={setIsFormOpen}/>

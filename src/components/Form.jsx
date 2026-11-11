@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import { nanoid } from 'nanoid';
 
-const Form = ({setUsers, users, setIsFormOpen,updatedUser}) => {
+const Form = ({setUsers, users, setIsFormOpen,updatedUser,setUpdatedUser}) => {
 
     let{register,reset,handleSubmit,formState:{errors}}=useForm(
       {mode: "onChange",
@@ -44,6 +44,8 @@ const Form = ({setUsers, users, setIsFormOpen,updatedUser}) => {
       localStorage.setItem("users",JSON.stringify(updatedUserArray))
 
       setUsers(updatedUserArray)
+
+      setUpdatedUser("")
 
           }else{
         console.log(data)
