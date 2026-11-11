@@ -6,7 +6,7 @@ const Card = ({user,id,deleteUser,setUpdatedUser, setIsFormOpen}) => {
       <div>
         {/* Header: Avatar + Name + Age */}
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-bold text-lg text-white shadow-md">
+          <div className="w-12 h-12 rounded-2xl bg-linear-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-bold text-lg text-white shadow-md">
             {user.name.charAt(0).toUpperCase()}
           </div>
           <div>
