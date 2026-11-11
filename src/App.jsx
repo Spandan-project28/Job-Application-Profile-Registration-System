@@ -26,6 +26,7 @@ const App = () => {
 
     const [updatedUser,setUpdatedUser]=useState()
 
+   
   return (
     <div className="min-h-screen w-full bg-zinc-950 text-white p-2 flex flex-col gap-4">
       <Navbar setIsFormOpen={setIsFormOpen} />

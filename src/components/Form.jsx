@@ -30,18 +30,21 @@ const Form = ({setUsers, users, setIsFormOpen,updatedUser}) => {
         onSubmit={ handleSubmit((data)=>{
 
           if(updatedUser){
-           setUsers((prev)=>{
-             return prev.map((user)=>{
-              if(user.id===updatedUser.id){
-                  return {...data,id:updatedUser.id}
-              }else{
-                return user
-              }
-              
-            })
-           })
-            let updatedUserArray=[...users]
-            localStorage.setItem("users",JSON.stringify(updatedUserArray))
+
+            let updatedUserArray= users.map((user)=>{
+          if (user.id===updatedUser.id){
+
+            return {...data,id:updatedUser.id}
+
+          }else{
+            return user
+          }
+      })
+
+      localStorage.setItem("users",JSON.stringify(updatedUserArray))
+
+      setUsers(updatedUserArray)
+
           }else{
         console.log(data)
 
